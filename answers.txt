@@ -1,0 +1,16 @@
+# assign-git
+Jonathan (Jack) MacArthur
+
+1) What is a gitignore file and what should it include for a Java project?
+	A gitiginore file is a file which lists any files or types of files within your working project which you do not want Git to track. This includes any machine-specific files, other files which may disrupt teammates, or any other documents which reside in your project bounds but should not be tracked on Git.
+	For a Java project, this includes several things: *.class, which will direct Git to ignore all compiled class files, along with *.log files which are used for logging specifics that don't need to be tracked. Additionally, any package files for Java should be ignored (*.jar or *.tar.gz and the like) as well as the .mtj.tmp/ directory if working in any mobile development.
+
+2) What does fast-forward in Git mean?
+	A fast-forward in Git refers to any situation where a merge is performed on top of a commit with a new commit which is directly reachable by following the history of the first. In other words, if the history is a straight line, a fast-forward occurs when merging a commit. This does not occur however if a new commit is being merged onto a commit which does not reside in the direct history line.
+
+3) Why should you have different branches?
+	Utilizing different branches during development is the beauty of source control. It allows developers to created different lines of history for which to iterate further on a project. Each branch can then therefore be used to develop further on some functionality, while maintaining separation from the development of others. All the while, any mistakes or issues are kept in a separate branch, therefore not getting in the way of other developments. When it comes time to join branches together, comparisons can be done easily and diverging histories can be fused together with simplicity.
+	
+4) In a project how many remote Git repositories do you usually have?
+	In one project, you typically only need one remote git repository. Typically, this one repository can track and hold all of the source code and changes for a project. However, in very specific situations where maybe a very general API is being built alongside an application which relies on that API though the API being built is planned to  be used by many others down the road, teams may decide to setup one remote repository for the API work, and a separate for the application, to allow for loose coupling and reuse later, though this is not typical.
+	
